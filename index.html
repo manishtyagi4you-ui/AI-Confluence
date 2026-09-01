@@ -405,6 +405,73 @@ button{font:inherit}
   }
 }
 
+/* OFFICIAL AI CONFLUENCE BANNER (FULLY VISIBLE & UNCROPPED ON ALL DEVICES) */
+.event-banner {
+  position: relative;
+  background: #07184d;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(15, 35, 100, 0.15);
+}
+.event-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain !important; /* Ensures zero cropping on all devices */
+  margin: 0 auto;
+}
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(6,20,65,0.10), transparent 35%, rgba(75,30,160,0.06));
+}
+.banner-intro {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+/* GLOBAL RESPONSIVE MEDIA QUERIES FOR ALL DEVICES */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+  .grid { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+  .register-panel { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .reg-card { min-height: auto !important; }
+  .qr-card { min-height: 350px !important; }
+}
+
+@media (max-width: 640px) {
+  .container { width: 94%; }
+  .event-banner img { width: 100%; height: auto; object-fit: contain !important; }
+  .competitions { padding: 45px 0 55px !important; }
+  .section-title { margin-bottom: 30px !important; }
+  .section-title h2 { font-size: clamp(26px, 7vw, 36px) !important; }
+  .grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .card { min-height: auto !important; padding: 18px !important; border-radius: 20px !important; }
+  .register { padding: 45px 0 55px !important; }
+  .register-head h2 { font-size: clamp(28px, 8vw, 42px) !important; }
+  .reg-card { padding: 20px !important; border-radius: 20px !important; }
+  .qr-box { width: 210px !important; height: 210px !important; padding: 8px !important; margin: 0 auto !important; }
+  .deadline-number { font-size: 64px !important; }
+  .contact-strip { flex-direction: column !alignment: center; text-align: center; gap: 12px; }
+  
+  /* Responsive Modal for Mobile */
+  .modal-bg { padding: 12px !important; }
+  .modal {
+    width: 100% !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    padding: 20px !important;
+    border-radius: 22px !important;
+  }
+  .modal-content-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+
 </style>
 </head>
 <body>
